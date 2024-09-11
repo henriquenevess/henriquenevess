@@ -39,6 +39,35 @@
         <h2>Primeiros Passos</h2>
         <p>Aqui você encontrará casos clínicos interativos para treinar suas habilidades de prescrição.</p>
         <p>Vamos começar com exemplos simples e expandir o conteúdo ao longo do tempo.</p>
+
+        <!-- Aqui começa o Caso Clínico 1 -->
+    <section>
+        <h2>Caso Clínico 1: Paciente com Pneumonia</h2>
+        <p><strong>História:</strong> Paciente masculino, 65 anos, tabagista, apresenta febre alta, tosse produtiva e dispneia.</p>
+        <p><strong>Exame Físico:</strong> Estertores crepitantes em bases pulmonares, FR 28, SpO2 89% em ar ambiente.</p>
+        <p><strong>Exames Laboratoriais:</strong> Hemograma: Leucócitos 15.000/mm³ com desvio à esquerda.</p>
+        <p><strong>Diagnóstico:</strong> Pneumonia adquirida na comunidade.</p>
+        <p><strong>Prescrição:</strong> Qual seria a prescrição ideal para este paciente?</p>
+        <button onclick="mostrarPrescricao()">Mostrar Prescrição Correta</button>
+        <p id="prescricao"></p>
+        
+        <script>
+            function mostrarPrescricao() {
+                document.getElementById("prescricao").innerHTML = `
+                    <strong>Prescrição Correta:</strong>
+                    <ul>
+                        <li>Ceftriaxona 1g IV 12/12h</li>
+                        <li>Azitromicina 500mg IV 1x/dia</li>
+                        <li>Oxigenoterapia: Cateter nasal 3L/min</li>
+                        <li>Hidratação venosa com SF 0,9% 500ml EV a cada 6 horas</li>
+                    </ul>
+                `;
+            }
+        </script>
+    </section>
+    <!-- Aqui termina o Caso Clínico 1 -->
+
+        
     </main>
     <footer>
         <p>Desenvolvido por Henrique Neves</p>
