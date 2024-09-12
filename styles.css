@@ -188,13 +188,13 @@ ul li:hover, button:hover {
 #menu-lateral {
     position: fixed;
     top: 0;
-    left: -200px; /* Escondido fora da tela */
+    left: -200px; /* Menu começa oculto na lateral esquerda */
     width: 200px;
     height: 100%;
     background-color: #3498db;
     padding-top: 60px;
-    transition: 0.3s; /* Transição suave */
-    z-index: 1000;
+    transition: left 0.3s ease; /* Transição suave ao aparecer */
+    z-index: 1000; /* Para garantir que o menu fique acima de outros elementos */
 }
 
 #menu-lateral ul {
@@ -203,7 +203,7 @@ ul li:hover, button:hover {
 }
 
 #menu-lateral ul li {
-    padding: 8px;
+    padding: 10px;
     text-align: left;
 }
 
@@ -215,11 +215,11 @@ ul li:hover, button:hover {
 }
 
 #menu-lateral ul li a:hover {
-    background-color: #2980b9; /* Cor ao passar o mouse */
-    padding-left: 10px; /* Pequeno efeito de deslizamento */
+    background-color: #2980b9;
+    padding-left: 10px; /* Leve deslizamento para a direita ao passar o mouse */
 }
 
-/* Quando o usuário passa o mouse, o menu aparece */
+/* Quando o usuário passa o mouse sobre a lateral esquerda, o menu aparece */
 #menu-lateral:hover {
-    left: 0;
+    left: 0; /* Move o menu para a posição visível */
 }
