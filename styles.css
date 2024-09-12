@@ -282,3 +282,17 @@ footer {
     padding-top: 10px;
     font-size: 0.8rem; /* Texto menor para os direitos autorais */
 }
+
+/* Animação fade-in */
+.fade-in {
+    opacity: 0; /* Elemento invisível inicialmente */
+    transform: translateY(20px); /* Elemento começa deslocado */
+    transition: opacity 1s ease, transform 1s ease; /* Suavidade na transição */
+}
+
+/* Classe para mostrar o elemento quando ele entra na tela */
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0); /* Volta para a posição original */
+}
+
