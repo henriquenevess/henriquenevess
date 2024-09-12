@@ -34,6 +34,39 @@
                 }
             </script>
         </section>
+
+        <!-- Aqui começa o Quiz Interativo -->
+            <section>
+                <h2>Quiz: Qual antibiótico é indicado para este caso?</h2>
+                <form>
+                    <label><input type="radio" name="antibiotico" value="errado"> Amoxicilina</label><br>
+                    <label><input type="radio" name="antibiotico" value="correto"> Ceftriaxona</label><br>
+                    <label><input type="radio" name="antibiotico" value="errado"> Ciprofloxacino</label><br>
+                    <button type="button" onclick="verificarResposta()">Verificar Resposta</button>
+                </form>
+                <p id="resposta"></p>
+                
+                <script>
+                    function verificarResposta() {
+                        var radios = document.getElementsByName('antibiotico');
+                        var resposta = '';
+                        for (var i = 0, length = radios.length; i < length; i++) {
+                            if (radios[i].checked) {
+                                if (radios[i].value == 'correto') {
+                                    resposta = "Correto! Ceftriaxona é indicada para pneumonia adquirida na comunidade moderada a grave.";
+                                } else {
+                                    resposta = "Incorreto! A opção correta é Ceftriaxona.";
+                                }
+                                break;
+                            }
+                        }
+                        document.getElementById("resposta").innerHTML = resposta;
+                    }
+                </script>
+            </section>
+    <!-- Aqui termina o Quiz Interativo -->
+
+        
         <a href="index.html">Voltar à Página Inicial</a>
     </main>
     <footer>
