@@ -72,6 +72,16 @@ ul li:hover {
     background-color: #2980b9;
 }
 
+/* Alterar a cor dos links dentro de elementos com fundo azul */
+ul li a {
+    color: #ffffff; /* Cor branca para garantir contraste no fundo azul */
+}
+
+ul li a:hover {
+    color: #f1c40f; /* Cor de destaque ao passar o mouse (amarelo ouro) */
+}
+
+
 /* Botões */
 button {
     background-color: #3498db;
