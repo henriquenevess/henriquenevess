@@ -24,63 +24,6 @@
             </ul>
         </section>
 
-
-        <!-- Aqui começa o Caso Clínico 1 -->
-        <section>
-            <h2>Caso Clínico 1: Paciente com Pneumonia</h2>
-            <p><strong>História:</strong> Paciente masculino, 65 anos, tabagista, apresenta febre alta, tosse produtiva e dispneia.</p>
-            <p><strong>Exame Físico:</strong> Estertores crepitantes em bases pulmonares, FR 28, SpO2 89% em ar ambiente.</p>
-            <p><strong>Exames Laboratoriais:</strong> Hemograma: Leucócitos 15.000/mm³ com desvio à esquerda.</p>
-            <p><strong>Diagnóstico:</strong> Pneumonia adquirida na comunidade.</p>
-            <p><strong>Prescrição:</strong> Qual seria a prescrição ideal para este paciente?</p>
-            <button onclick="mostrarPrescricao()">Mostrar Prescrição Correta</button>
-            <p id="prescricao"></p>
-            
-            <script>
-                function mostrarPrescricao() {
-                    document.getElementById("prescricao").innerHTML = `
-                        <strong>Prescrição Correta:</strong>
-                        <ul>
-                            <li>Ceftriaxona 1g IV 12/12h</li>
-                            <li>Azitromicina 500mg IV 1x/dia</li>
-                            <li>Oxigenoterapia: Cateter nasal 3L/min</li>
-                            <li>Hidratação venosa com SF 0,9% 500ml EV a cada 6 horas</li>
-                        </ul>
-                    `;
-                }
-            </script>
-        </section>
-        <!-- Aqui termina o Caso Clínico 1 -->
-        <!-- Aqui começa o Quiz Interativo -->
-            <section>
-                <h2>Quiz: Qual antibiótico é indicado para este caso?</h2>
-                <form>
-                    <label><input type="radio" name="antibiotico" value="errado"> Amoxicilina</label><br>
-                    <label><input type="radio" name="antibiotico" value="correto"> Ceftriaxona</label><br>
-                    <label><input type="radio" name="antibiotico" value="errado"> Ciprofloxacino</label><br>
-                    <button type="button" onclick="verificarResposta()">Verificar Resposta</button>
-                </form>
-                <p id="resposta"></p>
-                
-                <script>
-                    function verificarResposta() {
-                        var radios = document.getElementsByName('antibiotico');
-                        var resposta = '';
-                        for (var i = 0, length = radios.length; i < length; i++) {
-                            if (radios[i].checked) {
-                                if (radios[i].value == 'correto') {
-                                    resposta = "Correto! Ceftriaxona é indicada para pneumonia adquirida na comunidade moderada a grave.";
-                                } else {
-                                    resposta = "Incorreto! A opção correta é Ceftriaxona.";
-                                }
-                                break;
-                            }
-                        }
-                        document.getElementById("resposta").innerHTML = resposta;
-                    }
-                </script>
-            </section>
-    <!-- Aqui termina o Quiz Interativo -->
     <!-- Exemplos de Prescrições Médicas -->    
             <section>
             <h2>Exemplos de Prescrições Médicas</h2>
