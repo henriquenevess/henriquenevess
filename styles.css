@@ -31,6 +31,26 @@ h3 {
     color: #2980b9;
 }
 
+/* Links - Cor Global */
+a {
+    color: #3498db; /* Azul padrão */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2980b9; /* Azul mais escuro ao passar o mouse */
+}
+
+/* Links em áreas com fundo escuro */
+ul li a, header a, footer a {
+    color: #ffffff; /* Branco para links em áreas com fundo azul */
+}
+
+ul li a:hover, header a:hover, footer a:hover {
+    color: #f1c40f; /* Amarelo ouro ao passar o mouse */
+}
+
+
 /* Estilo Geral */
 main {
     padding: 40px 20px;
@@ -70,15 +90,6 @@ ul li {
 
 ul li:hover {
     background-color: #2980b9;
-}
-
-/* Alterar a cor dos links dentro de elementos com fundo azul */
-ul li a {
-    color: #ffffff; /* Cor branca para garantir contraste no fundo azul */
-}
-
-ul li a:hover {
-    color: #f1c40f; /* Cor de destaque ao passar o mouse (amarelo ouro) */
 }
 
 
