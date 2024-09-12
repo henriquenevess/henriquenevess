@@ -296,3 +296,26 @@ footer {
     transform: translateY(0); /* Volta para a posição original */
 }
 
+/* Botão de Voltar ao Topo */
+.top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 24px;
+    display: none; /* Inicialmente invisível */
+    transition: background-color 0.3s, opacity 0.3s ease;
+    opacity: 0.8; /* Um leve efeito de transparência */
+    z-index: 1000;
+}
+
+.top-btn:hover {
+    background-color: #2980b9; /* Muda de cor ao passar o mouse */
+    opacity: 1; /* Fica totalmente opaco ao hover */
+}
+
+
