@@ -1,6 +1,6 @@
 /* Tipografia */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     background-color: #f4f4f9;
     color: #333;
     margin: 0;
@@ -11,7 +11,7 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: 'Roboto Slab', serif; /* Adicionar uma fonte serifada para os títulos */
+    font-family: 'Montserrat', sans-serif;
     color: #2c3e50;
     margin-bottom: 20px;
 }
