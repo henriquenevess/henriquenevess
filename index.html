@@ -137,5 +137,25 @@
     </div>
 </footer>
 
+    <script>
+    // Função para detectar quando os elementos entram na área visível da tela
+    function checkScroll() {
+        const fadeInElements = document.querySelectorAll('.fade-in');
+        fadeInElements.forEach(element => {
+            const rect = element.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) {
+                element.classList.add('show'); // Adiciona a classe 'show' quando o elemento está visível
+            }
+        });
+    }
+
+    // Verifica o scroll sempre que o usuário rolar a página
+    window.addEventListener('scroll', checkScroll);
+
+    // Chama a função uma vez na inicialização para animar os elementos que já estão visíveis
+    checkScroll();
+</script>
+
+
 </body>
 </html>
