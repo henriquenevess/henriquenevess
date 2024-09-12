@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caso Clínico 2: Hipertensão Arterial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Caso Clínico 2: Paciente com Hipertensão Arterial</h1>
+    </header>
+    <main>
+        <section>
+            <p><strong>História:</strong> Paciente feminino, 58 anos, apresenta cefaleia e tontura. Histórico de hipertensão arterial diagnosticada há 10 anos, sem controle adequado.</p>
+            <p><strong>Exame Físico:</strong> PA 180/100 mmHg, FC 82 bpm, sem sinais de insuficiência cardíaca.</p>
+            <p><strong>Exames Laboratoriais:</strong> Creatinina 1,1 mg/dL, Sódio 139 mEq/L, Potássio 4,2 mEq/L.</p>
+            <p><strong>Diagnóstico:</strong> Hipertensão arterial não controlada.</p>
+            <p><strong>Prescrição:</strong> Qual seria a prescrição ideal para este paciente?</p>
+            <button onclick="mostrarPrescricao()">Mostrar Prescrição Correta</button>
+            <p id="prescricao"></p>
+            
+            <script>
+                function mostrarPrescricao() {
+                    document.getElementById("prescricao").innerHTML = `
+                        <strong>Prescrição Correta:</strong>
+                        <ul>
+                            <li>Losartana 50mg VO 1x/dia</li>
+                            <li>Hidroclorotiazida 25mg VO 1x/dia</li>
+                            <li>Atenolol 50mg VO 1x/dia (se necessário para controle de frequência cardíaca)</li>
+                        </ul>
+                    `;
+                }
+            </script>
+        </section>
+
+        <!-- Início do Quiz -->
+        <section>
+            <h2>Quiz: Qual medicamento é mais indicado para iniciar o tratamento?</h2>
+            <form>
+                <label><input type="radio" name="medicamento" value="errado"> Captopril</label><br>
+                <label><input type="radio" name="medicamento" value="correto"> Losartana</label><br>
+                <label><input type="radio" name="medicamento" value="errado"> Furosemida</label><br>
+                <button type="button" onclick="verificarResposta()">Verificar Resposta</button>
+            </form>
+            <p id="respostaQuiz"></p>
+            
+            <script>
+                function verificarResposta() {
+                    var radios = document.getElementsByName('medicamento');
+                    var resposta = '';
+                    for (var i = 0, length = radios.length; i < length; i++) {
+                        if (radios[i].checked) {
+                            if (radios[i].value == 'correto') {
+                                resposta = "Correto! Losartana é um dos medicamentos de escolha para hipertensão.";
+                            } else {
+                                resposta = "Incorreto! A Losartana é mais indicada para iniciar o tratamento.";
+                            }
+                            break;
+                        }
+                    }
+                    document.getElementById("respostaQuiz").innerHTML = resposta;
+                }
+            </script>
+        </section>
+        <!-- Fim do Quiz -->
+
+        <a href="index.html">Voltar à Página Inicial</a>
+    </main>
+    <footer>
+        <p>Desenvolvido por Henrique Neves</p>
+    </footer>
+</body>
+</html>
